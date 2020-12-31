@@ -1,0 +1,6 @@
+<!--miniprogram/pages/main/index.wxml-->
+<van-tabbar active="{{ active }}" active-color="#3399FF" inactive-color="#000" bind:change="onChange">
+  <van-tabbar-item name="home" icon="wap-home-o">首页</van-tabbar-item>
+  <!-- <van-tabbar-item name="publish" icon="add">发布</van-tabbar-item> -->
+  <van-tabbar-item name="mine" icon="user-circle-o">我的</van-tabbar-item>
+</van-tabbar>
