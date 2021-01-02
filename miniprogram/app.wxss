@@ -1,4 +1,7 @@
 /**app.wxss**/
+/* @import '/assets/fonts/iconfont.wxss'; */
+@import 'iconfont/iconfont.wxss';
+
 .container {
   display: flex;
   flex-direction: column;
@@ -153,4 +156,15 @@ page {
   font-size: 24rpx;
   line-height: 36rpx;
   word-break: break-all;
+}
+
+/* 用户自定义 */
+.background-view {
+  /* vertical-align: middle; */
+  height: 100%;
+  background-color: white;
+  /* align-items: center; */
+  display: flex;
+  flex-flow: column;
+  /* justify-content: space-around; */
 }

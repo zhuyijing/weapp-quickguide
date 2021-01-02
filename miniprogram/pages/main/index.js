@@ -6,7 +6,49 @@ Page({
    */
   data: {
     active: 'home',
-
+    slides: [
+      {
+        src: "../../images/kubernetes.png"
+      },
+      {
+        src: "../../images/Logo-Docker.jpg"
+      },
+      {
+        src: "../../images/git.jpg"
+      }
+    ],
+    projects: [
+      {
+        name: 'Kubernetes',
+        icon: 'icon-kubernetes',
+        path: '/pages/kubernetes/index'
+      },
+      {
+        name: 'Docker',
+        icon: 'icon-docker',
+        path: ''
+      },
+      {
+        name: 'Git',
+        icon: 'icon-git1',
+        path: ''
+      },
+      {
+        name: 'Markdown',
+        icon: 'icon-markdown',
+        path: ''
+      },
+      {
+        name: 'Bash',
+        icon: 'icon-shell',
+        path: ''
+      },
+      {
+        name: 'Mac Shortcuts',
+        icon: 'icon-cmd',
+        path: ''
+      }
+    ]
   },
 
   /**

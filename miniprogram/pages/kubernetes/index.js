@@ -1,4 +1,4 @@
-// pages/chooseLib/chooseLib.js
+// miniprogram/kubernetes/index.js
 Page({
 
   /**

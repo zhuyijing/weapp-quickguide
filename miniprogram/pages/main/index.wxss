@@ -1,1 +1,29 @@
 /* miniprogram/pages/main/index.wxss */
+
+page {
+  height: 100%;
+}
+
+.banner-view {
+  width: 100%;
+  height: 30%;
+  padding-bottom: 15rpx;
+}
+
+.grid-view {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-custom {
+  color: #6699FF;
+  font-size: 60rpx;
+}
+
+.icon-text {
+  padding-top: 10rpx;
+  color: #A9A9A9;
+  font-size: 25rpx;
+}

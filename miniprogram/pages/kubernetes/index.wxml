@@ -1,0 +1,8 @@
+<!--miniprogram/kubernetes/index.wxml-->
+<view class="background-view">
+  <van-cell-group title="Kubernetes Cheat Sheet">
+    <van-cell title="单元格" is-link />
+    <van-cell title="单元格" is-link value="内容" />
+    <van-cell title="单元格" is-link value="内容" />
+  </van-cell-group>
+</view>

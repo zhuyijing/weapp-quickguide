@@ -1,6 +1,37 @@
 <!--miniprogram/pages/main/index.wxml-->
 <van-tabbar active="{{ active }}" active-color="#3399FF" inactive-color="#000" bind:change="onChange">
   <van-tabbar-item name="home" icon="wap-home-o">首页</van-tabbar-item>
-  <!-- <van-tabbar-item name="publish" icon="add">发布</van-tabbar-item> -->
+  <van-tabbar-item name="file" icon="add">发布</van-tabbar-item>
   <van-tabbar-item name="mine" icon="user-circle-o">我的</van-tabbar-item>
 </van-tabbar>
+
+<view wx:if="{{ active == 'home' }}" class="background-view">
+  <view class="banner-view">
+    <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500" style="height:100%;">
+      <block wx:for="{{slides}}" wx:key="*this">
+        <swiper-item>
+          <image mode="aspectFit" src="{{item.src}}" style="height:100%;width:100%;"></image>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+  <view style="width:100%">
+    <van-grid clickable column-num="3">
+      <van-grid-item use-slot wx:for="{{ projects }}" wx:key="name" link-type="navigateTo" url="{{ item.path }}">
+        <view class="grid-view">
+          <icon class="iconfont icon-custom {{ item.icon }}"></icon>
+          <text class="icon-text">{{ item.name }}</text>
+        </view>
+      </van-grid-item>
+    </van-grid>
+  </view>
+</view>
+
+<view wx:if="{{ active == 'mine' }}" class="background-view">
+  这是我的
+</view>
+
+<view wx:if="{{ active == 'file' }}" class="background-view">
+  这是发布
+</view>
