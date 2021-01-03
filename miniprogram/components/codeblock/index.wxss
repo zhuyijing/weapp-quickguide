@@ -1,0 +1,26 @@
+/* components/codeblock/index.wxss */
+
+.codeblock-view {
+  background-color: #272822;
+  width: 98%;
+  border-radius: 5rpx;
+  /* box-shadow: 5px 5px 5px #cdcfcf; */
+  margin-left: 1%;
+  margin-right: 1%;
+
+  /* 横向滚动 */
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  padding: 10rpx;
+}
+
+.font-style {
+  color: #f8f8f2;
+  text-shadow: 0px 1px rgba(0, 0, 0, 0.3);
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+  /* padding: 10rpx; */
+  tab-size: 4;
+  font-size: medium;
+  white-space:pre-wrap;
+}
