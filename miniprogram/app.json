@@ -12,6 +12,8 @@
   },
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
+    "codeblock": "/components/codeblock/index",
+
     "van-button": "@vant/weapp/button/index",
     "van-tabbar": "@vant/weapp/tabbar/index",
     "van-tabbar-item": "@vant/weapp/tabbar-item/index",

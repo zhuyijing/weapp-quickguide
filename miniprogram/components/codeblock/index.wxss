@@ -2,7 +2,7 @@
 
 .codeblock-view {
   background-color: #272822;
-  width: 98%;
+  width: 98%-10rpx;
   border-radius: 5rpx;
   /* box-shadow: 5px 5px 5px #cdcfcf; */
   margin-left: 1%;
