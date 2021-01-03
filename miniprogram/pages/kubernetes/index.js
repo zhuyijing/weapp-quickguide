@@ -5,7 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-    codeText: 'kubectl create -f aa.yaml\nkubectl create -f aa.yaml',
+    codeText: 'kubectl describe ds <daemonset_name> -n <namespace_name>',
   },
 
   /**

@@ -22,5 +22,4 @@
   /* padding: 10rpx; */
   tab-size: 4;
   font-size: medium;
-  white-space:pre-wrap;
 }
