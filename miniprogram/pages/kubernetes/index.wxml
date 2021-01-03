@@ -6,5 +6,6 @@
     <van-cell title="Deployments" is-link value="详细" />
     <van-cell title="Events" is-link value="详细" />
   </van-cell-group>
-  <codeblock codeText="{{ codeText }}"></codeblock>
+  <view style="margin: 10rpx;"></view>
+  <cheatcard codeText="{{codeText}}"></cheatcard>
 </view>

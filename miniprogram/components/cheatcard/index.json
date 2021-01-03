@@ -1,0 +1,7 @@
+{
+  "component": true,
+  "usingComponents": {
+    "codeblock": "/components/codeblock/index",
+    "van-divider": "@vant/weapp/divider/index"
+  }
+}

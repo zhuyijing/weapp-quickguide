@@ -13,6 +13,7 @@
   "sitemapLocation": "sitemap.json",
   "usingComponents": {
     "codeblock": "/components/codeblock/index",
+    "cheatcard": "/components/cheatcard/index",
 
     "van-button": "@vant/weapp/button/index",
     "van-tabbar": "@vant/weapp/tabbar/index",
@@ -27,6 +28,7 @@
     "van-grid": "@vant/weapp/grid/index",
     "van-grid-item": "@vant/weapp/grid-item/index",
     "van-cell": "@vant/weapp/cell/index",
-    "van-cell-group": "@vant/weapp/cell-group/index"
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "van-divider": "@vant/weapp/divider/index"
   }
 }

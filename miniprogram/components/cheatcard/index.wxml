@@ -1,0 +1,6 @@
+<!--components/cheatcard/index.wxml-->
+<view class="cheatcard-view">
+  <text>Filter out normal events from a list of eventsFilter out normal events from a list of events</text>
+  <van-divider />
+  <codeblock codeText="{{codeText}}"></codeblock>
+</view>
