@@ -7,7 +7,7 @@
 
 <view wx:if="{{ active == 'home' }}" class="background-view">
   <view class="banner-view">
-    <swiper indicator-dots="true" autoplay="true" interval="2000" duration="500" style="height:100%;">
+    <swiper indicator-dots="true" autoplay="true" circular="true" interval="2000" duration="500" style="height:100%;">
       <block wx:for="{{slides}}" wx:key="*this">
         <swiper-item>
           <image mode="aspectFit" src="{{item.src}}" style="height:100%;width:100%;"></image>
@@ -18,7 +18,7 @@
 
   <view style="width:100%">
     <van-grid clickable column-num="3">
-      <van-grid-item use-slot wx:for="{{ projects }}" wx:key="name" link-type="navigateTo" url="{{ item.path }}">
+      <van-grid-item use-slot wx:for="{{ projects }}" wx:key="name" link-type="navigateTo" url="{{ item.path + '?db=' + item.db }}">
         <view class="grid-view">
           <icon class="iconfont icon-custom {{ item.icon }}"></icon>
           <text class="icon-text">{{ item.name }}</text>

@@ -1,10 +1,9 @@
 <!--miniprogram/kubernetes/index.wxml-->
 <view class="background-view">
   <van-cell-group title="Kubernetes Cheat Sheet">
-    <van-cell title="Cluster Management" is-link value="详细" />
-    <van-cell title="Daemonsets" is-link value="详细" />
-    <van-cell title="Deployments" is-link value="详细" />
-    <van-cell title="Events" is-link value="详细" />
+    <block wx:for="{{catalogs}}" wx:key="_id">
+      <van-cell title="{{item.name}}" is-link value="详细" />
+    </block>
   </van-cell-group>
   <view style="margin: 10rpx;"></view>
   <cheatcard desc="{{desc}}" descCN="{{descCN}}" codeText="{{codeText}}" avatar="{{avatar}}"

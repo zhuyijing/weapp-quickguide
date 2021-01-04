@@ -22,11 +22,11 @@ Component({
     },
     avatar: {
       type: String,
-      value: '',
+      value: 'https://img.yzcdn.cn/vant/cat.jpeg',
     },
     contributor: {
       type: String,
-      value: '',
+      value: '皓月当空',
     },
   },
 

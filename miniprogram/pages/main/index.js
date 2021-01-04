@@ -20,31 +20,37 @@ Page({
     projects: [
       {
         name: 'Kubernetes',
+        db: 'kubernetes',
         icon: 'icon-kubernetes',
         path: '/pages/kubernetes/index'
       },
       {
         name: 'Docker',
+        db: 'docker',
         icon: 'icon-docker',
         path: ''
       },
       {
         name: 'Git',
+        db: 'git',
         icon: 'icon-git1',
         path: ''
       },
       {
         name: 'Markdown',
+        db: 'markdown',
         icon: 'icon-markdown',
         path: ''
       },
       {
         name: 'Bash',
+        db: 'bash',
         icon: 'icon-shell',
         path: ''
       },
       {
         name: 'Mac Shortcuts',
+        db: 'mac',
         icon: 'icon-cmd',
         path: ''
       }

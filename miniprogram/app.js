@@ -15,5 +15,9 @@ App({
     }
 
     this.globalData = {}
+
+    // 初始化db
+    const db = wx.cloud.database();
+    this.globalData.db = db;
   }
 })

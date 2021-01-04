@@ -10,14 +10,31 @@ Page({
     codeText: 'kubectl describe ds <daemonset_name> -n <namespace_name>',
     avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
     contributor: '皓月当空',
-    source: '1'
+    source: '1',
+
+    catalogs: [1, 2, 3, 4],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    let dbname = options.db;
+    console.log(dbname);
 
+    var app = getApp();
+    var db = app.globalData.db;
+    var that = this;
+    db.collection(dbname).where({
+      type: 'catalog'
+    }).get({
+      success: function (res) {
+        console.log(res.data);
+        that.setData({catalogs: res.data});
+      }
+    });
+
+    //dbinst 
   },
 
   /**
