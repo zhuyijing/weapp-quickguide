@@ -1,10 +1,10 @@
 <!--miniprogram/pages/sheets/index.wxml-->
 <view class="background-view">
-  <view style="height: 10rpx;"></view>
+  <view style="margin: 5rpx;"></view>
   <block wx:for="{{tips}}" wx:key="_id">
     <cheatcard desc="{{item.desc}}" descCN="{{item.descCN}}" codeText="{{item.codeText}}"
       avatar="{{item.avatar == '' ? ownerAvatar : item.avatar}}"
       contributor="{{item.contributor == '' ? owner : item.contributor}}" source="{{item.source}}"></cheatcard>
-    <view style="height: 10rpx;"></view>
+      <view style="margin: 5rpx;"></view>
   </block>
 </view>
