@@ -7,5 +7,6 @@
     <van-cell title="Events" is-link value="详细" />
   </van-cell-group>
   <view style="margin: 10rpx;"></view>
-  <cheatcard codeText="{{codeText}}"></cheatcard>
+  <cheatcard desc="{{desc}}" descCN="{{descCN}}" codeText="{{codeText}}" avatar="{{avatar}}"
+    contributor="{{contributor}}" source="{{source}}"></cheatcard>
 </view>

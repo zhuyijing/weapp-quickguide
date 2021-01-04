@@ -5,7 +5,12 @@ Page({
    * 页面的初始数据
    */
   data: {
+    desc: 'Display the detailed state of daemonsets within a namespace',
+    descCN: '显示名字空间中DaemonSet的详细状态',
     codeText: 'kubectl describe ds <daemonset_name> -n <namespace_name>',
+    avatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
+    contributor: '皓月当空',
+    source: '1'
   },
 
   /**

@@ -2,6 +2,10 @@
   "component": true,
   "usingComponents": {
     "codeblock": "/components/codeblock/index",
-    "van-divider": "@vant/weapp/divider/index"
+    "van-divider": "@vant/weapp/divider/index",
+    "van-button": "@vant/weapp/button/index",
+    "van-tag": "@vant/weapp/tag/index",
+    "van-image": "@vant/weapp/image/index"
+
   }
 }

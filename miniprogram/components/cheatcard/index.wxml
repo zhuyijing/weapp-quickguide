@@ -1,6 +1,16 @@
 <!--components/cheatcard/index.wxml-->
 <view class="cheatcard-view">
-  <text>Filter out normal events from a list of eventsFilter out normal events from a list of events</text>
+  <view class="title-view">
+    <van-tag type="success" wx:if="{{ source == '0' }}">官方</van-tag>
+    <van-tag color="#9933CC" wx:else="{{ source == '0' }}">网络</van-tag>
+  </view>
+  <text class="desc-text">{{ desc }}</text>
+  <text class="desc-text" wx:if="{{ descCN }}">{{ '翻译: ' + descCN }}</text>
+  <van-button plain hairline type="primary" size="mini" custom-class="btn-style">我来翻译</van-button>
   <van-divider />
   <codeblock codeText="{{codeText}}"></codeblock>
+  <view class="footer-view"  wx:if="{{ source != '0' }}">
+    <van-image round width="30rpx" height="30rpx" custom-class="avatar" src="{{ avatar }}" />
+    <text class="by-text">by {{contributor}}</text>
+  </view>
 </view>
