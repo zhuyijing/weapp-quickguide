@@ -1,35 +1,37 @@
-// miniprogram/kubernetes/index.js
+// miniprogram/pages/sheets/index.js
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    db: '',
-    catalogs: [],
+    owner: '皓月当空',
+    ownerAvatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
+    tips: [],
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+
+    console.log(options);
     var dbname = options.db;
     console.log(dbname);
-    this.setData({db: dbname});
+    var parentID = options.pid;
 
     var app = getApp();
     var db = app.globalData.db;
     var that = this;
     db.collection(dbname).where({
-      type: 'catalog'
+      type: 'tips',
+      'parentID': parentID
     }).get({
       success: function (res) {
         console.log(res.data);
-        that.setData({catalogs: res.data});
+        that.setData({tips: res.data});
       }
     });
-
-    //dbinst 
   },
 
   /**

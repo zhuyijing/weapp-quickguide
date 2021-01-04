@@ -9,7 +9,7 @@
   <van-button plain hairline type="primary" size="mini" custom-class="btn-style">我来翻译</van-button>
   <van-divider />
   <codeblock codeText="{{codeText}}"></codeblock>
-  <view class="footer-view"  wx:if="{{ source != '0' }}">
+  <view class="footer-view">
     <van-image round width="30rpx" height="30rpx" custom-class="avatar" src="{{ avatar }}" />
     <text class="by-text">by {{contributor}}</text>
   </view>
