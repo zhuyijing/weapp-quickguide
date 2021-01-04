@@ -5,7 +5,7 @@
     <van-tag color="#9933CC" wx:else="{{ source == '0' }}">网络</van-tag>
   </view>
   <text class="desc-text">{{ desc }}</text>
-  <text class="desc-text" wx:if="{{ descCN }}">{{ '翻译: ' + descCN }}</text>
+  <text class="desc-text">{{ '翻译: ' + (descCN == '' ? '当前条目尚未翻译，期待您的帮助' : descCN) }}</text>
   <van-button plain hairline type="primary" size="mini" custom-class="btn-style">我来翻译</van-button>
   <van-divider />
   <codeblock codeText="{{codeText}}"></codeblock>
