@@ -7,7 +7,8 @@ Page({
   data: {
     db: '',
     owner: '皓月当空',
-    ownerAvatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
+    // ownerAvatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
+    ownerAvatar: '../../../../images/avatar.jpg',
     tips: [],
   },
 
