@@ -1,0 +1,105 @@
+{"_id":"1","type":"catalog","name":"Cluster Management"}
+{"_id":"2","type":"catalog","name":"Deployments"}
+{"_id":"3","type":"catalog","name":"Daemonsets"}
+{"_id":"4","type":"catalog","name":"Events"}
+{"_id":"5","type":"catalog","name":"logs"}
+{"_id":"6","type":"catalog","name":"Manifest Files"}
+{"_id":"7","type":"catalog","name":"Namespaces"}
+{"_id":"8","type":"catalog","name":"Nodes"}
+{"_id":"9","type":"catalog","name":"Pods"}
+{"_id":"10","type":"catalog","name":"Replication Controllers"}
+{"_id":"11","type":"catalog","name":"ReplicaSets"}
+{"_id":"12","type":"catalog","name":"Secrets"}
+{"_id":"13","type":"catalog","name":"Services"}
+{"_id":"14","type":"catalog","name":"Service Accounts"}
+{"_id":"15","type":"catalog","name":"StatefulSet"}
+{"_id":"16","type":"catalog","name":"Common Options"}
+{"type":"tips","parentID":"1","desc":"Display endpoint information about the master and services in the cluster","descCN":"","codeText":"kubectl cluster-info","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"1","desc":"Display the Kubernetes version running on the client and server","descCN":"","codeText":"kubectl version","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"1","desc":"Get the configuration of the cluster","descCN":"","codeText":"kubectl config view","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"1","desc":"List the API resources that are available","descCN":"","codeText":"kubectl api-resources","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"1","desc":"List the API versions that are available","descCN":"","codeText":"kubectl api-versions","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"1","desc":"List everything","descCN":"","codeText":"kubectl get all --all-namespaces","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"2","desc":"List one or more deployments","descCN":"","codeText":"kubectl get deployment","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"2","desc":"Display the detailed state of one or more deployments","descCN":"","codeText":"kubectl describe deployment <deployment_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"2","desc":"Edit and update the definition of one or more deployment on the server","descCN":"","codeText":"kubectl edit deployment <deployment_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"2","desc":"Create one a new deployment","descCN":"","codeText":"kubectl create deployment <deployment_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"2","desc":"Delete deployments","descCN":"","codeText":"kubectl delete deployment <deployment_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"2","desc":"See the rollout status of a deployment","descCN":"","codeText":"kubectl rollout status deployment <deployment_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"3","desc":"List one or more daemonsets","descCN":"","codeText":"kubectl get daemonset","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"3","desc":"Edit and update the definition of one or more daemonset","descCN":"","codeText":"kubectl edit daemonset <daemonset_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"3","desc":"Delete a daemonset","descCN":"","codeText":"kubectl delete daemonset <daemonset_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"3","desc":"Create a new daemonset","descCN":"","codeText":"kubectl create daemonset <daemonset_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"3","desc":"Manage the rollout of a daemonset","descCN":"","codeText":"kubectl rollout daemonset","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"3","desc":"Display the detailed state of daemonsets within a namespace","descCN":"","codeText":"kubectl describe ds <daemonset_name> -n <namespace_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"4","desc":"List recent events for all resources in the system","descCN":"","codeText":"kubectl get events","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"4","desc":"List Warnings only","descCN":"","codeText":"kubectl get events --field-selector type=Warning","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"4","desc":"List events but exclude Pod events","descCN":"","codeText":"kubectl get events --field-selector involvedObject.kind!=Pod","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"4","desc":"Pull events for a single node with a specific name","descCN":"","codeText":"kubectl get events --field-selector involvedObject.kind=Node, involvedObject.name=<node_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"4","desc":"Filter out normal events from a list of events","descCN":"","codeText":"kubectl get events --field-selector type!=Normal","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"5","desc":"Print the logs for a pod","descCN":"","codeText":"kubectl logs <pod_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"5","desc":"Print the logs for the last hour for a pod","descCN":"","codeText":"kubectl logs --since=1h <pod_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"5","desc":"Get the most recent 20 lines of logs","descCN":"","codeText":"kubectl logs --tail=20 <pod_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"5","desc":"Get logs from a service and optionally select which container","descCN":"","codeText":"kubectl logs -f <service_name> [-c <$container>]","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"5","desc":"Print the logs for a pod and follow new logs","descCN":"","codeText":"kubectl logs -f <pod_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"5","desc":"Print the logs for a container in a pod","descCN":"","codeText":"kubectl logs -c <container_name> <pod_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"5","desc":"Output the logs for a pod into a file named ‘pod.log’","descCN":"","codeText":"kubectl logs <pod_name> pod.log","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"5","desc":"View the logs for a previously failed pod","descCN":"","codeText":"kubectl logs --previous <pod_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"5","desc":"Get logs for all pods named with pod_prefix(kubetail: https://github.com/johanhaleby/kubetail)","descCN":"","codeText":"kubetail <pod_prefix>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"5","desc":"Include the most recent 5 minutes of logs","descCN":"","codeText":"kubetail <pod_prefix> -s 5m","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"5","desc":"View the laest 10 lines of log with selector","descCN":"","codeText":"kubectl logs -n <namespace> -l app=<app_label> --prefix --tail=10","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"6","desc":"Apply a configuration to an object by filename or stdin. Overrides the existing configuration.","descCN":"","codeText":"kubectl apply -f manifest_file.yaml","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"6","desc":"Create objects","descCN":"","codeText":"kubectl create -f manifest_file.yaml","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"6","desc":"Create objects in all manifest files in a directory","descCN":"","codeText":"kubectl create -f ./dir","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"6","desc":"Create objects from a URL","descCN":"","codeText":"kubectl create -f <url>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"6","desc":"Delete an object","descCN":"","codeText":"kubectl delete -f manifest_file.yaml","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"7","desc":"Create namespace <name>","descCN":"","codeText":"kubectl create namespace <namespace_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"7","desc":"List one or more namespaces","descCN":"","codeText":"kubectl get namespace <namespace_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"7","desc":"Display the detailed state of one or more namespace","descCN":"","codeText":"kubectl describe namespace <namespace_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"7","desc":"Delete a namespace","descCN":"","codeText":"kubectl delete namespace <namespace_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"7","desc":"Edit and update the definition of a namespace","descCN":"","codeText":"kubectl edit namespace <namespace_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"7","desc":"Display Resource (CPU/Memory/Storage) usage for a namespace","descCN":"","codeText":"kubectl top namespace <namespace_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"8","desc":"Update the taints on one or more nodes","descCN":"","codeText":"kubectl taint node <node_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"8","desc":"List one or more nodes","descCN":"","codeText":"kubectl get node","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"8","desc":"Delete a node or multiple nodes","descCN":"","codeText":"kubectl delete node <node_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"8","desc":"Display Resource usage (CPU/Memory/Storage) for nodes","descCN":"","codeText":"kubectl top node","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"8","desc":"Resource allocation per node","descCN":"","codeText":"kubectl describe nodes | grep Allocated -A 5","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"8","desc":"Pods running on a node","descCN":"","codeText":"kubectl get pods -o wide | grep <node_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"8","desc":"Annotate a node","descCN":"","codeText":"kubectl annotate node <node_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"8","desc":"Mark a node as unschedulable","descCN":"","codeText":"kubectl cordon node <node_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"8","desc":"Mark node as schedulable","descCN":"","codeText":"kubectl uncordon node <node_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"8","desc":"Drain a node in preparation for maintenance","descCN":"","codeText":"kubectl drain node <node_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"8","desc":"Add or update the labels of one or more nodes","descCN":"","codeText":"kubectl label node","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"9","desc":"List one or more pods","descCN":"","codeText":"kubectl get pod","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"9","desc":"Delete a pod","descCN":"","codeText":"kubectl delete pod <pod_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"9","desc":"Display the detailed state of a pods","descCN":"","codeText":"kubectl describe pod <pod_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"9","desc":"Create a pod","descCN":"","codeText":"kubectl create pod <pod_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"9","desc":"Execute a command against a container in a pod","descCN":"","codeText":"kubectl exec <pod_name> -c <container_name> <command>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"9","desc":"Get interactive shell on a a single-container pod","descCN":"","codeText":"kubectl exec -it <pod_name> /bin/sh","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"9","desc":"Display Resource usage (CPU/Memory/Storage) for pods","descCN":"","codeText":"kubectl top pod","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"9","desc":"Add or update the annotations of a pod","descCN":"","codeText":"kubectl annotate pod <pod_name> <annotation>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"9","desc":"Add or update the label of a pod","descCN":"","codeText":"kubectl label pod <pod_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"10","desc":"List the replication controllers","descCN":"","codeText":"kubectl get rc","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"10","desc":"List the replication controllers by namespace","descCN":"","codeText":"kubectl get rc --namespace=<namespace_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"11","desc":"List ReplicaSets","descCN":"","codeText":"kubectl get replicasets","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"11","desc":"Display the detailed state of one or more ReplicaSets","descCN":"","codeText":"kubectl describe replicasets <replicaset_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"11","desc":"Scale a ReplicaSet","descCN":"","codeText":"kubectl scale --replicas=[x]","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"12","desc":"Create a secret","descCN":"","codeText":"kubectl create secret","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"12","desc":"Create secret from input string","descCN":"","codeText":"kubectl create secret generic <secret_name> --from-literal=<key_name1>=<value1> --from-literal=<key_name2>=<value2>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"12","desc":"List secrets","descCN":"","codeText":"kubectl get secrets","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"12","desc":"List details about secrets","descCN":"","codeText":"kubectl describe secrets","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"12","desc":"Delete a secret","descCN":"","codeText":"kubectl delete secret <secret_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"13","desc":"List one or more services","descCN":"","codeText":"kubectl get services","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"13","desc":"Display the detailed state of a service","descCN":"","codeText":"kubectl describe services","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"13","desc":"Expose a replication controller, service, deployment or pod as a new Kubernetes service","descCN":"","codeText":"kubectl expose deployment [deployment_name]","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"13","desc":"Edit and update the definition of one or more services","descCN":"","codeText":"kubectl edit services","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"14","desc":"List service accounts","descCN":"","codeText":"kubectl get serviceaccounts","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"14","desc":"Display the detailed state of one or more service accounts","descCN":"","codeText":"kubectl describe serviceaccounts","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"14","desc":"Replace a service account","descCN":"","codeText":"kubectl replace serviceaccount","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"14","desc":"Delete a service account","descCN":"","codeText":"kubectl delete serviceaccount <service_account_name>","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"15","desc":"List StatefulSet","descCN":"","codeText":"kubectl get statefulset","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"15","desc":"Delete StatefulSet only (not pods)","descCN":"","codeText":"kubectl delete statefulset/[stateful_set_name] --cascade=false","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"16","desc":"-o Output format. For example if you wanted to list all of the pods in ps output format with more information.","descCN":"","codeText":"kubectl get pods -o wide\nkubectl get pods -o json","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"16","desc":"-n Shorthand for --namespace. For example, if you’d like to list all the Pods in a specific Namespace you would do this command:","descCN":"","codeText":"kubectl get pods --namespace=[namespace_name]\nkubectl get pods -n=[namespace_name]","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"16","desc":"-f Filename, directory, or URL to files to use to create a resource. For example when creating a pod using data in a file named newpod.json.","descCN":"","codeText":"kubectl create -f ./newpod.json","contributor":"","avatar":"","source":"0"}
+{"type":"tips","parentID":"16","desc":"-l Selector to filter on, supports =, ==, and !=","descCN":"","codeText":"kubectl logs -l app=<app_label>","contributor":"","avatar":"","source":"0"}

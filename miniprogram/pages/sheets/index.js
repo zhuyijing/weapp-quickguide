@@ -19,6 +19,7 @@ Page({
     var dbname = options.db;
     console.log(dbname);
     var parentID = options.pid;
+    wx.setNavigationBarTitle({title: options.title});
 
     var app = getApp();
     var db = app.globalData.db;

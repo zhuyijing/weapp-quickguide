@@ -22,7 +22,7 @@ Page({
         name: 'Kubernetes',
         db: 'kubernetes',
         icon: 'icon-kubernetes',
-        path: '/pages/kubernetes/index'
+        path: '/pages/catalog/index'
       },
       {
         name: 'Docker',

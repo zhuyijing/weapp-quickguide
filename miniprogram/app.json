@@ -1,7 +1,7 @@
 {
   "pages": [
     "pages/main/index",
-    "pages/kubernetes/index",
+    "pages/catalog/index",
     "pages/sheets/index"
   ],
   "window": {

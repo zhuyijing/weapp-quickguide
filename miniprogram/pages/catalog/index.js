@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    title: '',
     db: '',
     catalogs: [],
   },
@@ -16,6 +17,11 @@ Page({
     var dbname = options.db;
     console.log(dbname);
     this.setData({db: dbname});
+    var title = dbname.charAt(0).toUpperCase() + dbname.slice(1).toLowerCase();
+    wx.setNavigationBarTitle({
+      title: title,
+    });
+    this.setData({title: title});
 
     var app = getApp();
     var db = app.globalData.db;

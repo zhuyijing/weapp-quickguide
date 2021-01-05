@@ -1,8 +1,0 @@
-<!--miniprogram/kubernetes/index.wxml-->
-<view class="background-view">
-  <van-cell-group title="Kubernetes Cheat Sheet">
-    <block wx:for="{{catalogs}}" wx:key="_id">
-      <van-cell title="{{item.name}}" is-link value="详细" url="{{'/pages/sheets/index' + '?db=' + db + '&pid=' + item._id}}" />
-    </block>
-  </van-cell-group>
-</view>
