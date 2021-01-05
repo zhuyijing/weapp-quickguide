@@ -49,9 +49,9 @@ Page({
         path: ''
       },
       {
-        name: 'Mac Shortcuts',
+        name: 'Helm',
         db: 'mac',
-        icon: 'icon-cmd',
+        icon: 'icon-helm1',
         path: ''
       }
     ]
