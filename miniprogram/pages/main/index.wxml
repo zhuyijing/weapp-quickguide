@@ -1,8 +1,8 @@
 <!--miniprogram/pages/main/index.wxml-->
 <van-tabbar active="{{ active }}" active-color="#3399FF" inactive-color="#000" bind:change="onChange">
   <van-tabbar-item name="home" icon="wap-home-o">首页</van-tabbar-item>
-  <van-tabbar-item name="file" icon="add">发布</van-tabbar-item>
-  <van-tabbar-item name="mine" icon="user-circle-o">我的</van-tabbar-item>
+  <van-tabbar-item name="file" icon="add">帮忙补充</van-tabbar-item>
+  <van-tabbar-item name="about" icon="user-circle-o">关于</van-tabbar-item>
 </van-tabbar>
 
 <view wx:if="{{ active == 'home' }}" class="background-view">
@@ -18,7 +18,8 @@
 
   <view style="width:100%">
     <van-grid clickable column-num="3">
-      <van-grid-item use-slot wx:for="{{ projects }}" wx:key="name" link-type="navigateTo" url="{{ item.path + '?db=' + item.db }}">
+      <van-grid-item use-slot wx:for="{{ projects }}" wx:key="name" link-type="navigateTo"
+        url="{{ item.path + '?db=' + item.db }}">
         <view class="grid-view">
           <icon class="iconfont icon-custom {{ item.icon }}"></icon>
           <text class="icon-text">{{ item.name }}</text>
@@ -28,10 +29,11 @@
   </view>
 </view>
 
-<view wx:if="{{ active == 'mine' }}" class="background-view">
-  这是我的
+<view wx:if="{{ active == 'about' }}" class="background-view">
+  <view style="margin:5rpx;"></view>
+  <view class="about-banner-view"></view>
 </view>
 
 <view wx:if="{{ active == 'file' }}" class="background-view">
-  这是发布
+  <van-empty description="功能开发中，敬请期待" />
 </view>
