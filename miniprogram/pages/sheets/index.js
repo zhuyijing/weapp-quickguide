@@ -5,6 +5,7 @@ Page({
    * 页面的初始数据
    */
   data: {
+    db: '',
     owner: '皓月当空',
     ownerAvatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
     tips: [],
@@ -18,6 +19,7 @@ Page({
     console.log(options);
     var dbname = options.db;
     console.log(dbname);
+    this.setData({db: dbname});
     var parentID = options.pid;
     wx.setNavigationBarTitle({title: options.title});
 
@@ -82,5 +84,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+
+  // 用户自定义
+  onDoTranslate: function (event) {
+    console.log("let me do it");
+    console.log(event.detail);
   }
 })

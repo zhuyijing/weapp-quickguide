@@ -4,6 +4,14 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    dbName: {
+      type: String,
+      value: '',
+    },
+    indexID: {
+      type: String,
+      value: '',
+    },
     desc: {
       type: String,
       value: 'what?',
@@ -41,6 +49,11 @@ Component({
    * 组件的方法列表
    */
   methods: {
-
+    onTap: function() {
+      console.log(this.properties.indexID);
+      console.log(this.properties.dbName);
+      var myEventDetail = {db: this.properties.dbName, indexID: this.properties.indexID};
+      this.triggerEvent('doTranslate', myEventDetail);
+    }
   }
 })

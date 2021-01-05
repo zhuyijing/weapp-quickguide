@@ -3,8 +3,10 @@
   <view style="margin: 5rpx;"></view>
   <block wx:for="{{tips}}" wx:key="_id">
     <cheatcard desc="{{item.desc}}" descCN="{{item.descCN}}" codeText="{{item.codeText}}"
-      avatar="{{item.avatar == '' ? ownerAvatar : item.avatar}}"
-      contributor="{{item.contributor == '' ? owner : item.contributor}}" source="{{item.source}}"></cheatcard>
-      <view style="margin: 5rpx;"></view>
+      avatar="{{item.avatar == '' ? ownerAvatar : item.avatar}}" indexID="{{item._id}}" dbName="{{db}}"
+      contributor="{{item.contributor == '' ? owner : item.contributor}}" source="{{item.source}}"
+      bind:doTranslate="onDoTranslate">
+    </cheatcard>
+    <view style="margin: 5rpx;"></view>
   </block>
 </view>
