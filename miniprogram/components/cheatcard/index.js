@@ -49,11 +49,20 @@ Component({
    * 组件的方法列表
    */
   methods: {
-    onTap: function() {
+    onTap: function () {
       console.log(this.properties.indexID);
       console.log(this.properties.dbName);
-      var myEventDetail = {db: this.properties.dbName, indexID: this.properties.indexID};
+      var myEventDetail = {
+        db: this.properties.dbName,
+        indexID: this.properties.indexID
+      };
       this.triggerEvent('doTranslate', myEventDetail);
-    }
+    },
+
+    tapcopy: function () {
+      wx.setClipboardData({
+        data: this.properties.codeText,
+      })
+    },
   }
 })

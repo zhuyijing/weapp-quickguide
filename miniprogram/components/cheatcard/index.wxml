@@ -10,7 +10,12 @@
   <van-divider />
   <codeblock codeText="{{codeText}}"></codeblock>
   <view class="footer-view">
-    <van-image round width="30rpx" height="30rpx" custom-class="avatar" src="{{ avatar }}" />
-    <text class="by-text">by {{contributor}}</text>
+    <view class="footer-view-right">
+      <van-image round width="30rpx" height="30rpx" custom-class="avatar" src="{{ avatar }}" />
+      <text class="by-text">by {{contributor}}</text>
+    </view>
+    <view class="footer-view-left">
+      <view class="iconfont btn-copy icon-copydownlink" bindtap="tapcopy"></view>
+    </view>
   </view>
 </view>
