@@ -1,4 +1,6 @@
 // miniprogram/pages/sheets/index.js
+import { Base64 } from 'js-base64';
+
 Page({
 
   /**
@@ -7,7 +9,6 @@ Page({
   data: {
     db: '',
     owner: '皓月当空',
-    // ownerAvatar: 'https://img.yzcdn.cn/vant/cat.jpeg',
     ownerAvatar: '../../../../images/avatar.jpg',
     tips: [],
   },
@@ -33,7 +34,15 @@ Page({
     }).get({
       success: function (res) {
         console.log(res.data);
-        that.setData({tips: res.data});
+        var tmpData = res.data;
+        // 解码加密的代码段
+        for(var i=0; i < tmpData.length; i++) {
+          if (tmpData[i].hasOwnProperty('base64Encoded') && tmpData[i].base64Encoded == '1') {
+            tmpData[i].codeText = Base64.decode(tmpData[i].codeText);
+            console.log(tmpData[i].codeText);
+          }
+        }
+        that.setData({tips: tmpData});
       }
     });
   },
