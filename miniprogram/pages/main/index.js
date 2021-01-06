@@ -26,7 +26,7 @@ Page({
         name: 'Docker',
         db: 'docker',
         icon: 'icon-docker',
-        path: ''
+        path: '/pages/catalog/index'
       },
       {
         name: 'Git',
