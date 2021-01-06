@@ -1,5 +1,5 @@
 <!--components/codeblock/index.wxml-->
 <view class="codeblock-view">
-  <text class="font-style" decode="true" space="true">{{codeText}}</text>
+  <text class="font-style" decode="true" space="nbsp">{{codeText}}</text>
   <slot></slot>
 </view>
