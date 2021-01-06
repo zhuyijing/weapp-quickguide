@@ -168,3 +168,14 @@ page {
   flex-flow: column;
   /* justify-content: space-around; */
 }
+
+.card-view {
+  background-color: white;
+  width: 98%-10rpx;
+  border-radius: 8rpx;
+  box-shadow: 5px 5px 5px #cdcfcf;
+  margin: 5rpx;
+  display: flex;
+  flex-direction: column;
+  padding: 10rpx;
+}

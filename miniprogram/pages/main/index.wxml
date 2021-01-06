@@ -31,7 +31,23 @@
 
 <view wx:if="{{ active == 'about' }}" class="background-view">
   <view style="margin:5rpx;"></view>
-  <view class="about-banner-view"></view>
+  <view class="about-banner-view">
+    <view class="logo-view">
+      <van-image round width="150rpx" height="150rpx" src="../../../../images/logo.png" />
+    </view>
+    <view class="banner-text-view">
+      <text class="banner-text">码农速查手册 V1.0</text>
+      <view style="margin:5rpx;"></view>
+      <text class="banner-text author-text">By: 皓月当空</text>
+    </view>
+  </view>
+  <view style="margin:15rpx;"></view>
+  <view class="card-view about-list-view">
+    <view style="margin:10rpx;">
+      <van-cell title="关于速查手册" icon="award-o" is-link bind:click="aboutTap" />
+      <van-cell title="赞赏支持" icon="balance-o" is-link bind:click="awardTap" />
+    </view>
+  </view>
 </view>
 
 <view wx:if="{{ active == 'file' }}" class="background-view">

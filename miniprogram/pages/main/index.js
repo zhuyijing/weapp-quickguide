@@ -6,8 +6,7 @@ Page({
    */
   data: {
     active: 'home',
-    slides: [
-      {
+    slides: [{
         src: "../../images/kubernetes.png"
       },
       {
@@ -17,8 +16,7 @@ Page({
         src: "../../images/git.jpg"
       }
     ],
-    projects: [
-      {
+    projects: [{
         name: 'Kubernetes',
         db: 'kubernetes',
         icon: 'icon-kubernetes',
@@ -118,6 +116,24 @@ Page({
    * 用户自定义事件 
    */
   onChange: function (event) {
-    this.setData({active: event.detail});
+    this.setData({
+      active: event.detail
+    });
+  },
+
+  awardTap: function (event) {
+    wx.previewImage({
+      urls: ['cloud://test-4g6wxwqm77749c5d.7465-test-4g6wxwqm77749c5d-1304659731/award.jpg'],
+    })
+  },
+
+  aboutTap: function (event) {
+    wx.showModal({
+      title: '关于',
+      content: '内容大都来源于网络，由作者整理汇编。UI基于vant weapp及iconfont，由衷感谢！',
+      showCancel: false,
+      success(res) {
+      }
+    })
   }
 })
