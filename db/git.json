@@ -1,9 +1,9 @@
 {"_id":"1","type":"catalog","name":"Git configuration"}
-{"_id":"2","type":"catalog","name":"Starting Project"}
+{"_id":"2","type":"catalog","name":"Starting A Project"}
 {"_id":"3","type":"catalog","name":"Day-To-Day Work"}
-{"_id":"4","type":"catalog","name":"Git branching"}
+{"_id":"4","type":"catalog","name":"Git branching model"}
 {"_id":"5","type":"catalog","name":"Review your work"}
-{"_id":"6","type":"catalog","name":"Tagging commits"}
+{"_id":"6","type":"catalog","name":"Tagging known commits"}
 {"_id":"7","type":"catalog","name":"Reverting changes"}
 {"_id":"8","type":"catalog","name":"Sync repositories"}
 {"_id":"9","type":"catalog","name":"Rewriting History"}
