@@ -32,25 +32,25 @@ Page({
         name: 'Git',
         db: 'git',
         icon: 'icon-git1',
-        path: ''
+        path: '/pages/catalog/index'
       },
       {
         name: 'Markdown',
         db: 'markdown',
         icon: 'icon-markdown',
-        path: ''
+        path: '/pages/catalog/index'
       },
       {
         name: 'Bash',
         db: 'bash',
         icon: 'icon-shell',
-        path: ''
+        path: '/pages/catalog/index'
       },
       {
         name: 'Helm',
-        db: 'mac',
+        db: 'helm',
         icon: 'icon-helm1',
-        path: ''
+        path: '/pages/catalog/index'
       }
     ]
   },
