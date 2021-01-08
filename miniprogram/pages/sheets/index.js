@@ -100,5 +100,8 @@ Page({
   onDoTranslate: function (event) {
     console.log("let me do it");
     console.log(event.detail);
+    wx.navigateTo({
+      url: '/pages/translate/index?db=' + event.detail.db + '&indexID=' + event.detail.indexID,
+    })
   }
 })

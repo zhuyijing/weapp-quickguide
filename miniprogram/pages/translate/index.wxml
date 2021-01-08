@@ -1,0 +1,2 @@
+<!--miniprogram/pages/translate/index.wxml-->
+<van-notice-bar left-icon="volume-o" text="{{notice}}" speed="30" />

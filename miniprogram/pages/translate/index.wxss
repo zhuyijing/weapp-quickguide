@@ -1,0 +1,4 @@
+/* miniprogram/pages/translate/index.wxss */
+page {
+  height: 100%;
+}
