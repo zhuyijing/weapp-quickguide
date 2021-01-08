@@ -1,0 +1,22 @@
+{"_id":"1","type":"catalog","name":"Basic Syntax"}
+{"_id":"2","type":"catalog","name":"Extended Syntax"}
+
+{"type":"tips","parentID":"1","desc":"Heading","descCN":"","codeText":"IyBIMQojIyBIMgojIyMgSDM=","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"1","desc":"Bold","descCN":"","codeText":"Kipib2xkIHRleHQqKg==","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"1","desc":"Italic","descCN":"","codeText":"Kml0YWxpY2l6ZWQgdGV4dCo=","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"1","desc":"Blockquote","descCN":"","codeText":"PiBibG9ja3F1b3Rl","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"1","desc":"Ordered List","descCN":"","codeText":"MS4gRmlyc3QgaXRlbQoyLiBTZWNvbmQgaXRlbQozLiBUaGlyZCBpdGVt","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"1","desc":"Unordered List","descCN":"","codeText":"LSBGaXJzdCBpdGVtCi0gU2Vjb25kIGl0ZW0KLSBUaGlyZCBpdGVt","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"1","desc":"Code","descCN":"","codeText":"YGNvZGVg","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"1","desc":"Horizontal Rule","descCN":"","codeText":"LS0t","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"1","desc":"Link","descCN":"","codeText":"W3RpdGxlXShodHRwczovL3d3dy5leGFtcGxlLmNvbSk=","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"1","desc":"Image","descCN":"","codeText":"IVthbHQgdGV4dF0oaW1hZ2UuanBnKQ==","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+
+
+{"type":"tips","parentID":"2","desc":"Table","descCN":"","codeText":"fCBTeW50YXggICAgICB8IERlc2NyaXB0aW9uIHwKfCAtLS0tLS0tLS0tLSB8IC0tLS0tLS0tLS0tIHwKfCBIZWFkZXIgICAgICB8IFRpdGxlICAgICAgIHwKfCBQYXJhZ3JhcGggICB8IFRleHQgICAgICAgIHw=","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"2","desc":"Fenced Code Block","descCN":"","codeText":"YGBgCnsKICAiZmlyc3ROYW1lIjogIkpvaG4iLAogICJsYXN0TmFtZSI6ICJTbWl0aCIsCiAgImFnZSI6IDI1Cn0KYGBg","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"2","desc":"Footnote","descCN":"","codeText":"SGVyZSdzIGEgc2VudGVuY2Ugd2l0aCBhIGZvb3Rub3RlLiBbXjFdCgpbXjFdOiBUaGlzIGlzIHRoZSBmb290bm90ZS4=","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"2","desc":"Heading ID","descCN":"","codeText":"IyMjIE15IEdyZWF0IEhlYWRpbmcgeyNjdXN0b20taWR9","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"2","desc":"Definition List","descCN":"","codeText":"dGVybQo6IGRlZmluaXRpb24=","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"2","desc":"Strikethrough","descCN":"","codeText":"fn5UaGUgd29ybGQgaXMgZmxhdC5+fg==","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"type":"tips","parentID":"2","desc":"Task List","descCN":"","codeText":"LSBbeF0gV3JpdGUgdGhlIHByZXNzIHJlbGVhc2UKLSBbIF0gVXBkYXRlIHRoZSB3ZWJzaXRlCi0gWyBdIENvbnRhY3QgdGhlIG1lZGlh","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
