@@ -4,6 +4,10 @@ Component({
    * 组件的属性列表
    */
   properties: {
+    index: {
+      type: Number,
+      value: 0,
+    },
     dbName: {
       type: String,
       value: '',
@@ -54,7 +58,8 @@ Component({
       console.log(this.properties.dbName);
       var myEventDetail = {
         db: this.properties.dbName,
-        indexID: this.properties.indexID
+        indexID: this.properties.indexID,
+        index: this.properties.index,
       };
       this.triggerEvent('doTranslate', myEventDetail);
     },

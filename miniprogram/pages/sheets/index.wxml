@@ -5,7 +5,7 @@
     <cheatcard desc="{{item.desc}}" descCN="{{item.descCN}}" codeText="{{item.codeText}}"
       avatar="{{item.avatar == '' ? ownerAvatar : item.avatar}}" indexID="{{item._id}}" dbName="{{db}}"
       contributor="{{item.contributor == '' ? owner : item.contributor}}" source="{{item.source}}"
-      bind:doTranslate="onDoTranslate">
+      index="{{index}}" bind:doTranslate="onDoTranslate">
     </cheatcard>
     <view style="margin: 5rpx;"></view>
   </block>
