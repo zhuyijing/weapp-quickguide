@@ -1,5 +1,10 @@
 // miniprogram/pages/sheets/index.js
-import { Base64 } from 'js-base64';
+import {
+  Base64
+} from 'js-base64';
+import {
+  translate
+} from '../../api/translate';
 
 Page({
 
@@ -21,9 +26,13 @@ Page({
     console.log(options);
     var dbname = options.db;
     console.log(dbname);
-    this.setData({db: dbname});
+    this.setData({
+      db: dbname
+    });
     var parentID = options.pid;
-    wx.setNavigationBarTitle({title: options.title});
+    wx.setNavigationBarTitle({
+      title: options.title
+    });
 
     var app = getApp();
     var db = app.globalData.db;
@@ -36,13 +45,15 @@ Page({
         console.log(res.data);
         var tmpData = res.data;
         // 解码加密的代码段
-        for(var i=0; i < tmpData.length; i++) {
+        for (var i = 0; i < tmpData.length; i++) {
           if (tmpData[i].hasOwnProperty('base64Encoded') && tmpData[i].base64Encoded == '1') {
             tmpData[i].codeText = Base64.decode(tmpData[i].codeText);
             console.log(tmpData[i].codeText);
           }
         }
-        that.setData({tips: tmpData});
+        that.setData({
+          tips: tmpData
+        });
       }
     });
   },
@@ -98,10 +109,20 @@ Page({
 
   // 用户自定义
   onDoTranslate: function (event) {
-    console.log("let me do it");
     console.log(event.detail);
-    wx.navigateTo({
-      url: '/pages/translate/index?db=' + event.detail.db + '&indexID=' + event.detail.indexID,
-    })
+    var index = event.detail.index;
+    var desc = this.data.tips[index].desc;
+    var that = this;
+    translate(desc).then(res => {
+      var trans = res.data.sentences[0].trans;
+      console.log(trans);
+      var newTips = that.data.tips;
+      newTips[index].descCN = trans;
+      that.setData({
+        tips: newTips
+      });
+    }).catch(err => {
+      console.log(err)
+    });
   }
 })

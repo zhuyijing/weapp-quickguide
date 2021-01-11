@@ -6,7 +6,7 @@
   </view>
   <text class="desc-text">{{ desc }}</text>
   <text class="desc-text">{{ '翻译: ' + (descCN == '' ? '当前条目尚未翻译，期待您的帮助' : descCN) }}</text>
-  <van-button plain hairline type="primary" size="mini" custom-class="btn-style" bind:click="onTap">我来翻译</van-button>
+  <van-button plain hairline type="primary" size="mini" custom-class="btn-style" bind:click="onTap">谷歌翻译</van-button>
   <van-divider />
   <codeblock codeText="{{codeText}}"></codeblock>
   <view class="footer-view">
