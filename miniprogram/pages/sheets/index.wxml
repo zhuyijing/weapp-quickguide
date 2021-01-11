@@ -1,6 +1,7 @@
 <!--miniprogram/pages/sheets/index.wxml-->
 <view class="background-view">
-  <view style="margin: 5rpx;"></view>
+  <van-notice-bar left-icon="volume-o" text="{{notice}}" speed="30" />
+  <!-- <view style="margin: 5rpx;"></view> -->
   <block wx:for="{{tips}}" wx:key="_id">
     <cheatcard desc="{{item.desc}}" descCN="{{item.descCN}}" codeText="{{item.codeText}}"
       avatar="{{item.avatar == '' ? ownerAvatar : item.avatar}}" indexID="{{item._id}}" dbName="{{db}}"

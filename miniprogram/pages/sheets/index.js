@@ -16,6 +16,9 @@ Page({
     owner: '皓月当空',
     ownerAvatar: '../../../../images/avatar.jpg',
     tips: [],
+
+    // notice bar
+    notice: '翻译结果来自谷歌，对专业名词的翻译可能不准确，仅供参考，以英文为准！'
   },
 
   /**
