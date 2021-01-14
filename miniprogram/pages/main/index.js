@@ -51,6 +51,24 @@ Page({
         db: 'helm',
         icon: 'icon-helm1',
         path: '/pages/catalog/index'
+      },
+      {
+        name: 'SQL',
+        db: 'sql',
+        icon: 'icon-SQL',
+        path: '/pages/catalog/index'
+      },
+      {
+        name: 'Dockerfile',
+        db: 'dockerfile',
+        icon: 'icon-icon_dockerfile',
+        path: '/pages/catalog/index'
+      },
+      {
+        name: 'TLDR',
+        db: 'tldr',
+        icon: 'icon-linux',
+        path: '/pages/catalog/index'
       }
     ]
   },
