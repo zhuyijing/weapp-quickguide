@@ -1,0 +1,15 @@
+{"_id":"1","type":"catalog","name":"Inheritance"}
+{"_id":"2","type":"catalog","name":"Onbuild"}
+{"_id":"3","type":"catalog","name":"Entrypoint"}
+{"_id":"4","type":"catalog","name":"Variables"}
+{"_id":"5","type":"catalog","name":"Commands"}
+{"_id":"6","type":"catalog","name":"Initialization"}
+{"_id":"7","type":"catalog","name":"Metadata"}
+{"_id":"0a3f93956001277b01465f3f1322e188","type":"tips","parentID":"1","desc":"Sets the Base Image for subsequent instructions","descCN":"","codeText":"FROM ruby:2.2.2","contributor":"","avatar":"","source":"0"}
+{"_id":"0a3f93956001277b01465f40063166cd","type":"tips","parentID":"2","desc":"Adds a trigger instruction when the image is used as the base for another build","descCN":"","codeText":"ONBUILD RUN bundle install\n# when used with another file","contributor":"","avatar":"","source":"0"}
+{"_id":"0a3f93956001277b01465f415a851b03","type":"tips","parentID":"3","desc":"Configures a container that will run as an executable.","descCN":"","codeText":"RU5UUllQT0lOVCBbImV4ZWN1dGFibGUiLCAicGFyYW0xIiwgInBhcmFtMiJdCkVOVFJZUE9JTlQgY29tbWFuZCBwYXJhbTEgcGFyYW0y","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"_id":"0a3f93956001277b01465f4237d2d3da","type":"tips","parentID":"3","desc":"This will use shell processing to substitute shell variables, and will ignore any CMD or docker run command line arguments.","descCN":"","codeText":"ENTRYPOINT exec top -b","contributor":"","avatar":"","source":"0"}
+{"_id":"0a3f93956001277b01465f43122646e4","type":"tips","parentID":"4","desc":"Defines a build-time variable.","descCN":"","codeText":"RU5WIEFQUF9IT01FIC9teWFwcApSVU4gbWtkaXIgJEFQUF9IT01FCgpBUkcgQVBQX0hPTUU9IiIKUlVOIG1rZGlyICRBUFBfSE9NRQ==","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"_id":"0a3f93956001277b01465f4428bebfce","type":"tips","parentID":"5","desc":"Provide defaults for an executing container.","descCN":"","codeText":"RVhQT1NFIDU5MDAKQ01EICAgIFsiYnVuZGxlIiwgImV4ZWMiLCAicmFpbHMiLCAic2VydmVyIl0=","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"_id":"0a3f93956001277b01465f45329b2276","type":"tips","parentID":"6","desc":"An Initialization example","descCN":"","codeText":"UlVOIGJ1bmRsZSBpbnN0YWxsCgpXT1JLRElSIC9teWFwcAoKVk9MVU1FIFsiL2RhdGEiXQojIFNwZWNpZmljYXRpb24gZm9yIG1vdW50IHBvaW50CgpBREQgZmlsZS54eXogL2ZpbGUueHl6CkNPUFkgLS1jaG93bj11c2VyOmdyb3VwIGhvc3RfZmlsZS54eXogL3BhdGgvY29udGFpbmVyX2ZpbGUueHl6","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
+{"_id":"0a3f93956001277b01465f4664ae20a1","type":"tips","parentID":"7","desc":"Apply key/value metadata to your images, containers, or daemons.","descCN":"","codeText":"TEFCRUwgdmVyc2lvbj0iMS4wIgoKTEFCRUwgImNvbS5leGFtcGxlLnZlbmRvciI9IkFDTUUgSW5jb3Jwb3JhdGVkIgpMQUJFTCBjb20uZXhhbXBsZS5sYWJlbC13aXRoLXZhbHVlPSJmb28iCgpMQUJFTCBkZXNjcmlwdGlvbj0iVGhpcyB0ZXh0IGlsbHVzdHJhdGVzIFwKdGhhdCBsYWJlbC12YWx1ZXMgY2FuIHNwYW4gbXVsdGlwbGUgbGluZXMuIg==","contributor":"","avatar":"","source":"0","base64Encoded":"1"}
